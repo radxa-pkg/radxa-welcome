@@ -3,7 +3,7 @@ gnome.compile_resources(
   'com.radxa.welcome.gresource.xml',
   gresource_bundle: true,
   source_dir: meson.current_build_dir(),
-  install_dir: join_paths(get_option('datadir'), 'welcome/data'),
+  install_dir: join_paths(get_option('datadir'), 'radxa-welcome/data'),
   install: true
 )
 
@@ -47,11 +47,11 @@ if compile_schemas.found()
 endif
 
 install_data('ui/window.ui',
-  install_dir: join_paths(get_option('datadir'), 'welcome/data/ui')
+  install_dir: join_paths(get_option('datadir'), 'radxa-welcome/data/ui')
 )
 
 install_data('settings/settings.json',
-  install_dir: join_paths(get_option('datadir'), 'welcome/data/settings')
+  install_dir: join_paths(get_option('datadir'), 'radxa-welcome/data/settings')
 )
 
 subdir('icons')
