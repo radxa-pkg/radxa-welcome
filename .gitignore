@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+build/
+src/
+pkg/
+*.gresource
+*.pkg*
+obj-x86_64-linux-gnu

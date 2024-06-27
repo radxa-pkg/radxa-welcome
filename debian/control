@@ -1,0 +1,27 @@
+Source: radxa-welcome
+Maintainer: "Radxa Computer Co., Ltd" <dev@radxa.com>
+Section: utils
+Priority: standard
+Standards-Version: 4.6.0
+Build-Depends: debhelper (>=12~),
+               devscripts,
+               dh-exec,
+               lintian,
+               meson,
+               ninja-build,
+               libglib2.0-dev-bin,
+               appstream-util
+
+Package: radxa-welcome
+Architecture: all
+Section: utils
+Priority: standard
+Depends: python3,
+         python3-gi,
+         libgtk-4-1,
+         libadwaita-1-0,
+         python3-pyrunning,
+         python3-pysetting,
+         ${misc:Depends}
+Description: Welcome application written in GTK4
+ Includes links to useful resources for users.

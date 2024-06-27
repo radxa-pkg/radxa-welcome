@@ -1,0 +1,4 @@
+data/com.radxa.welcome.desktop.in
+data/com.radxa.welcome.appdata.xml.in
+data/com.radxa.welcome.gschema.xml
+data/ui/window.ui

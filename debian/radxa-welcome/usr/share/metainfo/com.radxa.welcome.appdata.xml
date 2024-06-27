@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>com.radxa.welcome</id>
+  <name>Radxa Welcome</name>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <summary>Welcome app that includes links to useful resources for users</summary>
+  <description>
+    <p>Welcome app that includes links to useful resources for users</p>
+  </description>
+  <url type="homepage">https://radxa.com/</url>
+  <releases>
+    <release version="0.0.1" date="2024-06-25"/>
+  </releases>
+  <content_rating type="oars-1.0">
+    <content_attribute id="violence-cartoon">none</content_attribute>
+    <content_attribute id="language">none</content_attribute>
+  </content_rating>
+</component>
