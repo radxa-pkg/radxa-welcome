@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Radxa welcome
-Icon=com.radxa.welcome
-Exec=/usr/bin/welcome
-Terminal=false
-Type=Application
-Categories=System;Utility;X-Utilities;
-StartupNotify=true
