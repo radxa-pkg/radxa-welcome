@@ -17,4 +17,4 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-python3 /usr/share/welcome/launch.py
+python3 /usr/share/radxa-welcome/launch.py

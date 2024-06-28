@@ -3,7 +3,7 @@
 <cambalache-project version="0.17.3" target_tk="gtk-4.0">
   <ui>
 	(1,None,"none.ui",None,None,None,None,None,None,None,None),
-	(2,3,"window.ui","window.ui",None,None,None,None,None,None,None)
+	(2,3,"window.ui","window.ui",None,None,None,None,"radxa-welcome",None,None)
   </ui>
   <ui_library>
 	(2,"gio","2.0",None),
@@ -35,9 +35,9 @@
 	(2,23,"GtkMenuButton","wechat_button",14,None,None,None,4,None,None),
 	(2,25,"GtkBox",None,13,None,None,None,1,None,None),
 	(2,26,"GtkBox",None,13,None,None,None,2,None,None),
-	(2,27,"GtkButton",None,26,None,None,None,None,None,None),
+	(2,27,"GtkButton","rsetup_button",26,None,None,None,None,None,None),
 	(2,28,"AdwButtonContent",None,27,None,None,None,None,None,None),
-	(2,29,"GtkButton",None,26,None,None,None,1,None,None),
+	(2,29,"GtkButton","package_manager",26,None,None,None,1,None,None),
 	(2,30,"AdwViewStackPage","config_page",9,None,None,None,1,None,None),
 	(2,31,"GtkBox",None,30,None,None,None,None,None,None),
 	(2,32,"GtkLabel",None,31,None,None,None,None,None,None),
@@ -63,7 +63,8 @@
 	(2,52,"GtkMenuButton",None,14,None,None,None,5,None,None),
 	(2,53,"GtkBox",None,52,None,None,None,None,None,None),
 	(2,54,"GtkImage","qq_icon",53,None,None,None,None,None,None),
-	(2,55,"GtkLabel",None,53,None,None,None,1,None,None)
+	(2,55,"GtkLabel",None,53,None,None,None,1,None,None),
+	(2,56,"AdwButtonContent",None,29,None,None,None,-1,None,None)
   </object>
   <object_property>
 	(2,2,"(item)","action","app.about",None,None,None,None,None,None,None,None,None),
@@ -86,10 +87,10 @@
 	(2,8,"GtkOrientable","orientation","vertical",None,None,None,None,None,None,None,None,None),
 	(2,10,"AdwViewStackPage","child",None,None,None,None,None,11,None,None,None,None),
 	(2,10,"AdwViewStackPage","icon-name","go-home-symbolic",None,None,None,None,None,None,None,None,None),
-	(2,10,"AdwViewStackPage","title","Home",None,None,None,None,None,None,None,None,None),
+	(2,10,"AdwViewStackPage","title","Home",1,None,"Tab title",None,None,None,None,None,None),
 	(2,11,"GtkOrientable","orientation","vertical",None,None,None,None,None,None,None,None,None),
 	(2,12,"AdwStatusPage","child",None,None,None,None,None,13,None,None,None,None),
-	(2,12,"AdwStatusPage","description","Below you will find useful links to our social media",None,None,None,None,None,None,None,None,None),
+	(2,12,"AdwStatusPage","description","Below you will find useful links to our social media",1,None,None,None,None,None,None,None,None),
 	(2,12,"AdwStatusPage","title","Welcome to RadxaOS!",1,None,None,None,None,None,None,None,None),
 	(2,12,"GtkWidget","hexpand","True",None,None,None,None,None,None,None,None,None),
 	(2,12,"GtkWidget","vexpand","True",None,None,None,None,None,None,None,None,None),
@@ -101,16 +102,16 @@
 	(2,14,"GtkWidget","hexpand","True",None,None,None,None,None,None,None,None,None),
 	(2,15,"GtkButton","child",None,None,None,None,None,16,None,None,None,None),
 	(2,16,"AdwButtonContent","icon-name","com.radxa.welcome",None,None,None,None,None,None,None,None,None),
-	(2,16,"AdwButtonContent","label","Website",None,None,None,None,None,None,None,None,None),
+	(2,16,"AdwButtonContent","label","Website",1,None,"Button",None,None,None,None,None,None),
 	(2,16,"GtkWidget","halign","center",None,None,None,None,None,None,None,None,None),
 	(2,16,"GtkWidget","valign","center",None,None,None,None,None,None,None,None,None),
 	(2,17,"GtkButton","child",None,None,None,None,None,18,None,None,None,None),
 	(2,18,"AdwButtonContent","icon-name","accessories-text-editor",None,None,None,None,None,None,None,None,None),
-	(2,18,"AdwButtonContent","label","Forums",None,None,None,None,None,None,None,None,None),
+	(2,18,"AdwButtonContent","label","Forums",1,None,"Button",None,None,None,None,None,None),
 	(2,18,"GtkWidget","halign","center",None,None,None,None,None,None,None,None,None),
 	(2,19,"GtkButton","child",None,None,None,None,None,20,None,None,None,None),
 	(2,20,"AdwButtonContent","icon-name","folder-documents-symbolic",None,None,None,None,None,None,None,None,None),
-	(2,20,"AdwButtonContent","label","Documentation",None,None,None,None,None,None,None,None,None),
+	(2,20,"AdwButtonContent","label","Documentation",1,None,"Button",None,None,None,None,None,None),
 	(2,20,"GtkWidget","halign","center",None,None,None,None,None,None,None,None,None),
 	(2,23,"GtkMenuButton","popover","40",None,None,None,None,None,None,None,None,None),
 	(2,25,"GtkOrientable","orientation","vertical",None,None,None,None,None,None,None,None,None),
@@ -120,11 +121,12 @@
 	(2,26,"GtkWidget","hexpand","True",None,None,None,None,None,None,None,None,None),
 	(2,27,"GtkButton","child",None,None,None,None,None,28,None,None,None,None),
 	(2,28,"AdwButtonContent","icon-name","com.radxa.welcome",None,None,None,None,None,None,None,None,None),
-	(2,28,"AdwButtonContent","label","Radxa setup utility",None,None,None,None,None,None,None,None,None),
+	(2,28,"AdwButtonContent","label","Radxa setup utility",1,None,"Button",None,None,None,None,None,None),
 	(2,28,"GtkWidget","halign","center",None,None,None,None,None,None,None,None,None),
+	(2,29,"GtkButton","child",None,None,None,None,None,56,None,None,None,None),
 	(2,30,"AdwViewStackPage","child",None,None,None,None,None,31,None,None,None,None),
 	(2,30,"AdwViewStackPage","icon-name","document-properties-symbolic",None,None,None,None,None,None,None,None,None),
-	(2,30,"AdwViewStackPage","title","Configuration",None,None,None,None,None,None,None,None,None),
+	(2,30,"AdwViewStackPage","title","Configuration",1,None,"Tab title",None,None,None,None,None,None),
 	(2,30,"AdwViewStackPage","visible","False",None,None,None,None,None,None,None,None,None),
 	(2,33,"AdwViewStackPage","badge-number","1",None,None,None,None,None,None,None,None,None),
 	(2,33,"AdwViewStackPage","child",None,None,None,None,None,34,None,None,None,None),
@@ -153,13 +155,13 @@
 	(2,42,"GtkBox","spacing","4",None,None,None,None,None,None,None,None,None),
 	(2,42,"GtkWidget","halign","center",None,None,None,None,None,None,None,None,None),
 	(2,43,"GtkImage","icon-size","normal",None,None,None,None,None,None,None,None,None),
-	(2,44,"GtkLabel","label","WeChat",None,None,None,None,None,None,None,None,None),
+	(2,44,"GtkLabel","label","WeChat",1,None,"Button",None,None,None,None,None,None),
 	(2,45,"GtkBox","spacing","5",None,None,None,None,None,None,None,None,None),
 	(2,45,"GtkWidget","halign","center",None,None,None,None,None,None,None,None,None),
-	(2,47,"GtkLabel","label","Discord",None,None,None,None,None,None,None,None,None),
+	(2,47,"GtkLabel","label","Discord",1,None,"Button",None,None,None,None,None,None),
 	(2,48,"GtkPopover","child",None,None,None,None,None,49,None,None,None,None),
 	(2,49,"GtkOrientable","orientation","vertical",None,None,None,None,None,None,None,None,None),
-	(2,50,"GtkLabel","label","Group ID: 591048098",None,None,None,None,None,None,None,None,None),
+	(2,50,"GtkLabel","label","Group ID: 591048098",1,None,"Do not translate the ID (aka 591048098)",None,None,None,None,None,None),
 	(2,50,"GtkWidget","halign","center",None,None,None,None,None,None,None,None,None),
 	(2,51,"GtkImage","pixel-size","128",None,None,None,None,None,None,None,None,None),
 	(2,52,"GtkMenuButton","popover","48",None,None,None,None,None,None,None,None,None),
@@ -167,7 +169,10 @@
 	(2,53,"GtkWidget","halign","center",None,None,None,None,None,None,None,None,None),
 	(2,54,"GtkImage","icon-size","normal",None,None,None,None,None,None,None,None,None),
 	(2,54,"GtkImage","pixel-size","24",None,None,None,None,None,None,None,None,None),
-	(2,55,"GtkLabel","label","QQ",None,None,None,None,None,None,None,None,None)
+	(2,55,"GtkLabel","label","QQ",1,None,"Button",None,None,None,None,None,None),
+	(2,56,"AdwButtonContent","icon-name","package-x-generic",None,None,None,None,None,None,None,None,None),
+	(2,56,"AdwButtonContent","label","Software center",1,None,"Button","Has to be generic",None,None,None,None,None),
+	(2,56,"GtkWidget","halign","center",None,None,None,None,None,None,None,None,None)
   </object_property>
   <object_data>
 	(2,2,"(item)",3,1,None,None,None,None,None,None),

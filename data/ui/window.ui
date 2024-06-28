@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Created with Cambalache 0.90.3 -->
-<interface>
+<interface domain="radxa-welcome">
   <!-- interface-name window.ui -->
   <requires lib="gio" version="2.0"/>
   <requires lib="gtk" version="4.8"/>
@@ -60,7 +60,7 @@
                                           <object class="AdwButtonContent">
                                             <property name="halign">center</property>
                                             <property name="icon-name">com.radxa.welcome</property>
-                                            <property name="label">Website</property>
+                                            <property name="label" translatable="yes" context="Button">Website</property>
                                             <property name="valign">center</property>
                                           </object>
                                         </property>
@@ -72,7 +72,7 @@
                                           <object class="AdwButtonContent">
                                             <property name="halign">center</property>
                                             <property name="icon-name">accessories-text-editor</property>
-                                            <property name="label">Forums</property>
+                                            <property name="label" translatable="yes" context="Button">Forums</property>
                                           </object>
                                         </property>
                                       </object>
@@ -83,7 +83,7 @@
                                           <object class="AdwButtonContent">
                                             <property name="halign">center</property>
                                             <property name="icon-name">folder-documents-symbolic</property>
-                                            <property name="label">Documentation</property>
+                                            <property name="label" translatable="yes" context="Button">Documentation</property>
                                           </object>
                                         </property>
                                       </object>
@@ -99,7 +99,7 @@
                                             </child>
                                             <child>
                                               <object class="GtkLabel">
-                                                <property name="label">Discord</property>
+                                                <property name="label" translatable="yes" context="Button">Discord</property>
                                               </object>
                                             </child>
                                           </object>
@@ -120,7 +120,7 @@
                                             </child>
                                             <child>
                                               <object class="GtkLabel">
-                                                <property name="label">WeChat</property>
+                                                <property name="label" translatable="yes" context="Button">WeChat</property>
                                               </object>
                                             </child>
                                           </object>
@@ -142,7 +142,7 @@
                                             </child>
                                             <child>
                                               <object class="GtkLabel">
-                                                <property name="label">QQ</property>
+                                                <property name="label" translatable="yes" context="Button">QQ</property>
                                               </object>
                                             </child>
                                           </object>
@@ -163,24 +163,32 @@
                                     <property name="orientation">vertical</property>
                                     <property name="spacing">5</property>
                                     <child>
-                                      <object class="GtkButton">
+                                      <object class="GtkButton" id="rsetup_button">
                                         <property name="child">
                                           <object class="AdwButtonContent">
                                             <property name="halign">center</property>
                                             <property name="icon-name">com.radxa.welcome</property>
-                                            <property name="label">Radxa setup utility</property>
+                                            <property name="label" translatable="yes" context="Button">Radxa setup utility</property>
                                           </object>
                                         </property>
                                       </object>
                                     </child>
                                     <child>
-                                      <object class="GtkButton"/>
+                                      <object class="GtkButton" id="package_manager">
+                                        <property name="child">
+                                          <object class="AdwButtonContent">
+                                            <property name="halign">center</property>
+                                            <property name="icon-name">package-x-generic</property>
+                                            <property name="label" translatable="yes" context="Button" comments="Has to be generic">Software center</property>
+                                          </object>
+                                        </property>
+                                      </object>
                                     </child>
                                   </object>
                                 </child>
                               </object>
                             </property>
-                            <property name="description">Below you will find useful links to our social media</property>
+                            <property name="description" translatable="yes">Below you will find useful links to our social media</property>
                             <property name="hexpand">True</property>
                             <property name="title" translatable="yes">Welcome to RadxaOS!</property>
                             <property name="vexpand">True</property>
@@ -189,7 +197,7 @@
                       </object>
                     </property>
                     <property name="icon-name">go-home-symbolic</property>
-                    <property name="title">Home</property>
+                    <property name="title" translatable="yes" context="Tab title">Home</property>
                   </object>
                 </child>
                 <child>
@@ -202,7 +210,7 @@
                       </object>
                     </property>
                     <property name="icon-name">document-properties-symbolic</property>
-                    <property name="title">Configuration</property>
+                    <property name="title" translatable="yes" context="Tab title">Configuration</property>
                     <property name="visible">False</property>
                   </object>
                 </child>
@@ -286,7 +294,7 @@
         <child>
           <object class="GtkLabel">
             <property name="halign">center</property>
-            <property name="label">Group ID: 591048098</property>
+            <property name="label" translatable="yes" context="Do not translate the ID (aka 591048098)">Group ID: 591048098</property>
           </object>
         </child>
         <child>

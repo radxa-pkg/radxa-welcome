@@ -46,15 +46,15 @@ def setup_translations(lang: object = None) -> gettext.GNUTranslations:
     # Load translations
     if lang is not None:
         print("Loading translations for", lang)
-        gettext.bindtextdomain("welcome", lang_path)
-        gettext.textdomain("welcome")
-        translation = gettext.translation("welcome", lang_path, languages=[lang])
+        gettext.bindtextdomain("radxa-welcome", lang_path)
+        gettext.textdomain("radxa-welcome")
+        translation = gettext.translation("radxa-welcome", lang_path, languages=[lang])
         translation.install()
         return translation.gettext  # type: ignore
     else:
         print(lang_path)
-        gettext.bindtextdomain("welcome", lang_path)
-        gettext.textdomain("welcome")
+        gettext.bindtextdomain("radxa-welcome", lang_path)
+        gettext.textdomain("radxa-welcome")
         return gettext.gettext  # type: ignore
 
 
@@ -71,7 +71,7 @@ def setup_logging() -> logging.Logger:
     logger = logging.getLogger("radxa-welcome")
     logger.setLevel(logging.DEBUG)
 
-    log_dir = os.path.join(os.path.expanduser("~"), ".cache", "welcome", "logs")
+    log_dir = os.path.join(os.path.expanduser("~"), ".cache", "radxa-welcome", "logs")
     log_file = os.path.join(
         log_dir, datetime.now().strftime("radxa-welcome-%Y-%m-%d-%H-%M-%S.log")
     )

@@ -1,1 +1,1 @@
-gettext = i18n.gettext('welcome')
+gettext = i18n.gettext('radxa-welcome')
