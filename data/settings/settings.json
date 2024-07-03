@@ -1,4 +1,5 @@
 {
     "version": "0.0.1",
-    "autostart": "true"
+    "autostart": true,
+    "first_run": true
 }

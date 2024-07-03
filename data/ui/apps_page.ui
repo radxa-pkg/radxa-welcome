@@ -1,0 +1,332 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.90.4 -->
+<interface>
+  <requires lib="gtk" version="4.8"/>
+  <requires lib="libadwaita" version="1.2"/>
+  <template class="apps_page" parent="AdwBin">
+    <property name="child">
+      <object class="GtkBox">
+        <property name="orientation">vertical</property>
+        <property name="spacing">10</property>
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="halign">start</property>
+                <property name="label">Welcome to RadxaOS</property>
+                <style>
+                  <class name="title-1"/>
+                </style>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel">
+                <property name="halign">start</property>
+                <property name="label">Below you will find usefull applications</property>
+                <style>
+                  <class name="."/>
+                  <class name="."/>
+                </style>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkGrid">
+            <property name="column-spacing">15</property>
+            <property name="row-spacing">15</property>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">5</property>
+                <child>
+                  <object class="GtkButton" id="rsetup_button">
+                    <property name="child">
+                      <object class="GtkImage">
+                        <property name="icon-name">com.radxa.welcome</property>
+                        <property name="pixel-size">64</property>
+                      </object>
+                    </property>
+                    <property name="height-request">32</property>
+                    <property name="hexpand-set">True</property>
+                    <property name="width-request">32</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="justify">center</property>
+                    <property name="label" translatable="yes">Radxa setup utility</property>
+                    <property name="lines">3</property>
+                    <property name="max-width-chars">3</property>
+                    <property name="natural-wrap-mode">word</property>
+                    <property name="wrap">True</property>
+                  </object>
+                </child>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="column-span">1</property>
+                  <property name="row">0</property>
+                  <property name="row-span">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">5</property>
+                <child>
+                  <object class="GtkButton" id="software_button">
+                    <property name="child">
+                      <object class="GtkImage">
+                        <property name="icon-name">package-x-generic</property>
+                        <property name="pixel-size">64</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="halign">center</property>
+                    <property name="justify">center</property>
+                    <property name="label" translatable="yes">Software center</property>
+                    <property name="lines">2</property>
+                    <property name="max-width-chars">10</property>
+                    <property name="natural-wrap-mode">word</property>
+                    <property name="valign">center</property>
+                    <property name="wrap">True</property>
+                  </object>
+                </child>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="column-span">1</property>
+                  <property name="row">0</property>
+                  <property name="row-span">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">5</property>
+                <child>
+                  <object class="GtkButton" id="terminal_button">
+                    <property name="child">
+                      <object class="GtkImage">
+                        <property name="icon-name">utilities-terminal</property>
+                        <property name="pixel-size">64</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="justify">center</property>
+                    <property name="label" translatable="yes">Terminal</property>
+                  </object>
+                </child>
+                <layout>
+                  <property name="column">2</property>
+                  <property name="column-span">1</property>
+                  <property name="row">0</property>
+                  <property name="row-span">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">5</property>
+                <child>
+                  <object class="GtkButton" id="task_manager_button">
+                    <property name="child">
+                      <object class="GtkImage">
+                        <property name="icon-name">utilities-system-monitor</property>
+                        <property name="pixel-size">64</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="justify">center</property>
+                    <property name="label">Task manager</property>
+                    <property name="lines">1</property>
+                    <property name="wrap">True</property>
+                  </object>
+                </child>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">5</property>
+                <property name="visible">False</property>
+                <child>
+                  <object class="GtkButton">
+                    <property name="child">
+                      <object class="GtkImage">
+                        <property name="pixel-size">64</property>
+                      </object>
+                    </property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel"/>
+                </child>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">5</property>
+                <property name="visible">False</property>
+                <child>
+                  <object class="GtkButton">
+                    <property name="child">
+                      <object class="GtkImage">
+                        <property name="pixel-size">64</property>
+                      </object>
+                    </property>
+                    <property name="height-request">32</property>
+                    <property name="hexpand-set">True</property>
+                    <property name="width-request">32</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel"/>
+                </child>
+                <layout>
+                  <property name="column">2</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">5</property>
+                <property name="visible">False</property>
+                <child>
+                  <object class="GtkButton">
+                    <property name="child">
+                      <object class="GtkImage">
+                        <property name="pixel-size">64</property>
+                      </object>
+                    </property>
+                    <property name="height-request">32</property>
+                    <property name="hexpand-set">True</property>
+                    <property name="width-request">32</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel"/>
+                </child>
+                <layout>
+                  <property name="column">3</property>
+                  <property name="row">1</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">5</property>
+                <property name="visible">False</property>
+                <child>
+                  <object class="GtkButton">
+                    <property name="child">
+                      <object class="GtkImage">
+                        <property name="pixel-size">64</property>
+                      </object>
+                    </property>
+                    <property name="height-request">32</property>
+                    <property name="width-request">32</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel"/>
+                </child>
+                <layout>
+                  <property name="column">1</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">5</property>
+                <child>
+                  <object class="GtkButton" id="settings_button">
+                    <property name="child">
+                      <object class="GtkImage">
+                        <property name="icon-name">settings-configure</property>
+                        <property name="pixel-size">64</property>
+                      </object>
+                    </property>
+                    <property name="height-request">32</property>
+                    <property name="hexpand-set">True</property>
+                    <property name="width-request">32</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel">
+                    <property name="justify">center</property>
+                    <property name="label" translatable="yes">System settings</property>
+                    <property name="lines">2</property>
+                    <property name="max-width-chars">7</property>
+                    <property name="natural-wrap-mode">word</property>
+                    <property name="wrap">True</property>
+                  </object>
+                </child>
+                <layout>
+                  <property name="column">3</property>
+                  <property name="row">0</property>
+                </layout>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox">
+                <property name="orientation">vertical</property>
+                <property name="spacing">5</property>
+                <property name="visible">False</property>
+                <child>
+                  <object class="GtkButton">
+                    <property name="child">
+                      <object class="GtkImage">
+                        <property name="pixel-size">64</property>
+                      </object>
+                    </property>
+                    <property name="height-request">32</property>
+                    <property name="hexpand-set">True</property>
+                    <property name="width-request">32</property>
+                  </object>
+                </child>
+                <child>
+                  <object class="GtkLabel"/>
+                </child>
+                <layout>
+                  <property name="column">0</property>
+                  <property name="row">2</property>
+                </layout>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </property>
+    <property name="margin-bottom">20</property>
+    <property name="margin-end">20</property>
+    <property name="margin-start">20</property>
+    <property name="margin-top">20</property>
+  </template>
+</interface>

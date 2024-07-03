@@ -49,6 +49,18 @@ endif
 install_data('ui/window.ui',
   install_dir: join_paths(get_option('datadir'), 'radxa-welcome/data/ui')
 )
+install_data('ui/preferences.ui',
+  install_dir: join_paths(get_option('datadir'), 'radxa-welcome/data/ui')
+)
+install_data('ui/apps_page.ui',
+  install_dir: join_paths(get_option('datadir'), 'radxa-welcome/data/ui')
+)
+install_data('ui/links_page.ui',
+  install_dir: join_paths(get_option('datadir'), 'radxa-welcome/data/ui')
+)
+install_data('ui/main.css',
+  install_dir: join_paths(get_option('datadir'), 'radxa-welcome/data/ui')
+)
 
 install_data('settings/settings.json',
   install_dir: join_paths(get_option('datadir'), 'radxa-welcome/data/settings')
