@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: radxa-welcome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-27 18:18+0300\n"
+"POT-Creation-Date: 2024-07-03 11:19+0300\n"
 "PO-Revision-Date: 2024-06-27 18:18+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -29,74 +29,10 @@ msgstr ""
 msgid "Welcome app that includes links to useful resources for users"
 msgstr ""
 
-#: data/ui/window.ui:11
+#: data/ui/window.ui:12
+msgid "Preferences"
+msgstr ""
+
+#: data/ui/window.ui:18
 msgid "About Radxa Welcome"
-msgstr ""
-
-#: data/ui/window.ui:63
-msgctxt "Button"
-msgid "Website"
-msgstr ""
-
-#: data/ui/window.ui:75
-msgctxt "Button"
-msgid "Forums"
-msgstr ""
-
-#: data/ui/window.ui:86
-msgctxt "Button"
-msgid "Documentation"
-msgstr ""
-
-#: data/ui/window.ui:102
-msgctxt "Button"
-msgid "Discord"
-msgstr ""
-
-#: data/ui/window.ui:123
-msgctxt "Button"
-msgid "WeChat"
-msgstr ""
-
-#: data/ui/window.ui:145
-msgctxt "Button"
-msgid "QQ"
-msgstr ""
-
-#: data/ui/window.ui:171
-msgctxt "Button"
-msgid "Radxa setup utility"
-msgstr ""
-
-#. Has to be generic
-#: data/ui/window.ui:182
-msgctxt "Button"
-msgid "Software center"
-msgstr ""
-
-#: data/ui/window.ui:191
-msgid "Below you will find useful links to our social media"
-msgstr ""
-
-#: data/ui/window.ui:193
-msgid "Welcome to RadxaOS!"
-msgstr ""
-
-#: data/ui/window.ui:200
-msgctxt "Tab title"
-msgid "Home"
-msgstr ""
-
-#: data/ui/window.ui:213
-msgctxt "Tab title"
-msgid "Configuration"
-msgstr ""
-
-#: data/ui/window.ui:256
-msgid "Close"
-msgstr ""
-
-#: data/ui/window.ui:297
-msgctxt "Do not translate the ID (aka 591048098)"
-msgid "Group ID: 591048098"
 msgstr ""
