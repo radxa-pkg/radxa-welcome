@@ -14,11 +14,14 @@ install_data('discord-icon.svg',
 
 #qq_qr and qq_icon
 #install_data('qq-qr-light.svg',
-#    install_dir: join_paths(get_option('datadir'), 'data/assets/')
+#    install_dir: join_paths(get_option('datadir'), 'radxa-welcome/data/assets/')
 #)
 install_data('qq-qr-dark.svg',
     install_dir: join_paths(get_option('datadir'), 'radxa-welcome/data/assets/')
 )
 install_data('qq-icon.svg',
+    install_dir: join_paths(get_option('datadir'), 'radxa-welcome/data/assets/')
+)
+install_data('discourse-icon.svg',
     install_dir: join_paths(get_option('datadir'), 'radxa-welcome/data/assets/')
 )

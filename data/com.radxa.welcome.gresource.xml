@@ -2,5 +2,8 @@
 <gresources>
   <gresource prefix="/com/radxa/welcome">
     <file preprocess="xml-stripblanks">ui/window.ui</file>
+    <file preprocess="xml-stripblanks">ui/preferences.ui</file>
+    <file preprocess="xml-stripblanks">ui/links_page.ui</file>
+    <file preprocess="xml-stripblanks">ui/apps_page.ui</file>
   </gresource>
 </gresources>

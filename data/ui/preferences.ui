@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Created with Cambalache 0.90.4 -->
+<interface>
+  <requires lib="gtk" version="4.8"/>
+  <requires lib="libadwaita" version="1.2"/>
+  <template class="preferences_window" parent="AdwPreferencesWindow">
+    <property name="default-height">200</property>
+    <property name="default-width">200</property>
+    <child>
+      <object class="AdwPreferencesPage">
+        <child>
+          <object class="AdwPreferencesGroup">
+            <property name="hexpand">True</property>
+            <property name="title" translatable="yes">Main settings</property>
+            <property name="vexpand">True</property>
+            <child>
+              <object class="AdwActionRow">
+                <property name="activatable">False</property>
+                <property name="selectable">False</property>
+                <property name="subtitle">Controls whether to launch the Radxa Welcome app on startup</property>
+                <property name="title">Launch on startup</property>
+                <child>
+                  <object class="GtkSwitch" id="autolaunch">
+                    <property name="valign">center</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>
