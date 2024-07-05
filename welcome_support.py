@@ -334,13 +334,24 @@ def check_app_installed(app_pkg: str) -> bool:
     """
     lp(f"Checking if {app_pkg} is installed..", mode="debug")
     try:
-        subprocess.check_call(
+        # Run dpkg -s command to check if the package is installed
+        result = subprocess.run(
             ["dpkg", "-s", app_pkg],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.DEVNULL,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True,
         )
-        return True
-    except subprocess.CalledProcessError:
+        # Check the output for the status of the package
+        if result.returncode != 0:
+            lp(f"Pacakge {app_pkg} is not installed.", mode="debug")
+            return False
+        output = result.stdout
+        if "Status: install ok installed" in output:
+            lp(f"Package {app_pkg} is installed.", mode="debug")
+            return True
+        return False
+    except Exception as e:
+        print(f"An error occurred: {e}")
         return False
 
 
@@ -354,6 +365,7 @@ def install_app(app_pkg: str) -> None:
         :param app_pkg:  The package name of the application
         :type app_pkg: str
     """
+    lp(f"Installing {app_pkg}..", mode="info")
     lrun(["pkexec", "apt-get", "install", "-y", app_pkg])
 
 
@@ -367,6 +379,7 @@ def launch_app(app_exec: str) -> None:
         :param app_exec:  The executable name of the application
         :type app_exec: str
     """
+    lp(f"Launching {app_exec}..", mode="info")
     lrun(["gtk-launch", app_exec], wait=False)
 
 
@@ -431,6 +444,7 @@ def check_installed(app_type: str, window) -> None:
 
     for pretty_name, (pkgname, exec_name) in apps[app_type].items():
         if check_app_installed(pkgname):
+            lp(f"{pretty_name} is installed.", mode="info")
             launch_app(exec_name)
             return
 
