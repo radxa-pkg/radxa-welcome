@@ -270,7 +270,7 @@ class AppsPage(Adw.Bin):
         self.settings_button.connect("clicked", self.on_settings_button_clicked)
 
     def on_rsetup_button_clicked(self, button) -> None:
-        lrun(["gtk-launch", "rsetup"])
+        lrun(["gtk-launch", "rsetup"], wait=False)
 
     def on_software_button_clicked(self, button) -> None:
         check_installed("software_center", window=self.window)
