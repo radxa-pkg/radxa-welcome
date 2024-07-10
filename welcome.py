@@ -34,6 +34,7 @@ from welcome_support import (
     settings_get,
     settings_set,
     check_installed,
+    get_info_for_welcome,
 )
 from locale import getlocale
 from webbrowser import open
@@ -79,6 +80,8 @@ class WelcomeApp(Adw.Application):
             application_name="Radxa Welcome",
             application_icon="com.radxa.welcome-text",
             developer_name="Radxa",
+            debug_info=get_info_for_welcome(),
+            debug_info_filename="debug_info.txt",
             version="0.0.1",
             developers=["Panda"],
             copyright="© 2024 Radxa Computer Co., Ltd",
