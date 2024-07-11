@@ -450,3 +450,66 @@ def check_installed(app_type: str, window) -> None:
 
     dialog = make_install_app_dialog(app_type, window)
     dialog.present()
+
+def detect_device() -> str:
+    try:
+        with open("/sys/firmware/devicetree/base/model", "r") as model_file:
+            return model_file.read().rstrip("\n").rstrip("\x00")
+    except FileNotFoundError:
+        try:
+            with open("/sys/class/dmi/id/product_name", "r") as product_name_file:
+                return product_name_file.read().rstrip("\n")
+        except FileNotFoundError:
+            return "unknown"
+        
+def detect_session_configuration() -> dict:
+    # Check for the XDG_SESSION_TYPE environment variable
+    try:
+        xdg_session_type = os.environ.get("XDG_SESSION_TYPE")
+    except:
+        xdg_session_type = None
+    # Check for the XDG_CURRENT_DESKTOP environment variable and lowercase it
+    try:
+        xdg_current_desktop = os.environ.get("XDG_CURRENT_DESKTOP").lower()
+    except:
+        xdg_current_desktop = None
+    # look at where display-manager.service is symlinked to
+    try:
+        display_manager = os.path.basename(
+            os.path.realpath("/etc/systemd/system/display-manager.service")
+        ).replace(".service", "")
+    except:
+        display_manager = None
+
+    if xdg_session_type == "wayland":
+        return {"dm": display_manager, "de": xdg_current_desktop, "is_wayland": True}
+    else:
+        return {"dm": display_manager, "de": xdg_current_desktop, "is_wayland": False}
+
+def get_image_fingerprint() -> str:
+    try:
+        with open("/etc/radxa_image_fingerprint", "r") as fingerprint_file:
+            return fingerprint_file.read()
+    except FileNotFoundError:
+        return None
+
+def get_extlinux_conf() -> str:
+    try:
+        with open("/boot/extlinux/extlinux.conf", "r") as extlinux_conf:
+            return extlinux_conf.read()
+    except FileNotFoundError:
+        return None
+
+def get_info_for_welcome() -> str:
+    device = detect_device()
+    session = detect_session_configuration()
+    fingerprint = get_image_fingerprint()
+    extlinux = get_extlinux_conf()
+    debug_info = f"Device: {device}\n"
+    debug_info += f"Desktop Environment: {session['de']}\n"
+    debug_info += f"Display Manager: {session['dm']}\n"
+    debug_info += f"Wayland: {session['is_wayland']}\n"
+    debug_info += f"Image Fingerprint:\n{fingerprint}\n"
+    debug_info += f"extlinux.conf:\n{extlinux}"
+    return debug_info
+
