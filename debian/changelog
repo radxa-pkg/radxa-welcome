@@ -1,3 +1,19 @@
+radxa-welcome (0.0.2) UNRELEASED; urgency=medium
+
+  * chore: remove unnecessary build files in debian/radxa-welcome
+  * chore: remove unnecessary UI files
+  * refactor: change references from "welcome" to "radxa-welcome"
+  * chore: add Chinese translation file
+  * chore: update translations
+  * feat: major additions to the UI and assets
+  * feat: add preferences, autolaunch, apps and more
+  * feat: fix package installed detection
+  * fix: stop rsetup from hanging the welcome app
+  * chore: stop the user from being able to resize the app
+  * feat: Add debug info to welcome app
+
+ -- RadxaPanda <panda@radxa.org>  Wed, 17 Jul 2024 03:53:13 +0000
+
 radxa-welcome (0.0.1) unstable; urgency=medium
 
   [ RadxaPanda ]
