@@ -20,6 +20,7 @@
 import gettext
 import logging
 import os
+import locale
 from os import path
 import subprocess
 from time import sleep, monotonic
@@ -53,15 +54,15 @@ def setup_translations(lang: object = None) -> gettext.GNUTranslations:
     lang_path = path.join(path.dirname(__file__), "locale")
     # Load translations
     if lang is not None:
-        print("Loading translations for", lang)
-        gettext.bindtextdomain("welcome", lang_path)
-        gettext.textdomain("welcome")
-        translation = gettext.translation("welcome", lang_path, languages=[lang])
+        print("    INFO: Loading translations for", lang)
+        gettext.bindtextdomain("radxa-welcome", lang_path)
+        gettext.textdomain("radxa-welcome")
+        translation = gettext.translation("radxa-welcome", languages=[lang], fallback=True)
         translation.install()
-        return translation.gettext  # type: ignore
+        return translation.gettext, translation.pgettext # type: ignore
     else:
-        gettext.bindtextdomain("welcome", lang_path)
-        gettext.textdomain("welcome")
+        gettext.bindtextdomain("radxa-welcome")
+        gettext.textdomain("radxa-welcome")
         return gettext.gettext, gettext.pgettext  # type: ignore
 
 
@@ -194,7 +195,7 @@ def settings_set(key: str, value: Any) -> None:
 
 lp("Logger started.")
 lp("Setting up translations..")
-_, p_ = setup_translations()  # type: ignore
+_, p_ = setup_translations(locale.getdefaultlocale()[0])  # type: ignore
 lp("Translations setup.")
 lp("Getting settings..")
 app_settings = load_settings()

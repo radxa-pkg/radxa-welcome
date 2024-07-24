@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Created with Cambalache 0.90.4 -->
-<interface>
+<!-- Created with Cambalache 0.91.1 -->
+<interface domain="radxa-welcome">
   <!-- interface-name none.ui -->
   <requires lib="gtk" version="4.8"/>
   <requires lib="libadwaita" version="1.2"/>
@@ -20,7 +20,7 @@
             <child>
               <object class="GtkLabel">
                 <property name="halign">start</property>
-                <property name="label">Welcome to RadxaOS</property>
+                <property name="label" translatable="yes">Welcome to RadxaOS</property>
                 <style>
                   <class name="title-1"/>
                 </style>
@@ -29,7 +29,7 @@
             <child>
               <object class="GtkLabel">
                 <property name="halign">start</property>
-                <property name="label">Below you will find links to our social media</property>
+                <property name="label" translatable="yes">Below you will find links to our social media</property>
               </object>
             </child>
           </object>
@@ -57,7 +57,7 @@
                 </child>
                 <child>
                   <object class="GtkLabel">
-                    <property name="label">Website</property>
+                    <property name="label" translatable="yes">Website</property>
                   </object>
                 </child>
                 <layout>
@@ -83,7 +83,7 @@
                 </child>
                 <child>
                   <object class="GtkLabel">
-                    <property name="label">Forums</property>
+                    <property name="label" translatable="yes">Forums</property>
                   </object>
                 </child>
                 <layout>
@@ -110,7 +110,7 @@
                 </child>
                 <child>
                   <object class="GtkLabel">
-                    <property name="label">Docs</property>
+                    <property name="label" translatable="yes">Docs</property>
                   </object>
                 </child>
                 <layout>
@@ -145,7 +145,7 @@
                 </child>
                 <child>
                   <object class="GtkLabel">
-                    <property name="label">WeChat</property>
+                    <property name="label" translatable="yes">WeChat</property>
                   </object>
                 </child>
                 <layout>
@@ -172,7 +172,7 @@
                             <property name="orientation">vertical</property>
                             <child>
                               <object class="GtkLabel">
-                                <property name="label">Group ID: 591048098</property>
+                                <property name="label" translatable="yes">Group ID: 591048098</property>
                               </object>
                             </child>
                             <child>
@@ -188,7 +188,7 @@
                 </child>
                 <child>
                   <object class="GtkLabel">
-                    <property name="label">QQ</property>
+                    <property name="label" translatable="yes">QQ</property>
                   </object>
                 </child>
                 <layout>
@@ -292,7 +292,7 @@
                 </child>
                 <child>
                   <object class="GtkLabel">
-                    <property name="label">Discord</property>
+                    <property name="label" translatable="yes">Discord</property>
                   </object>
                 </child>
                 <layout>

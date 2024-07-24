@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Created with Cambalache 0.90.4 -->
-<interface>
+<!-- Created with Cambalache 0.91.1 -->
+<interface domain="radxa-welcome">
   <!-- interface-name window.ui -->
   <requires lib="gio" version="2.0"/>
   <requires lib="gtk" version="4.8"/>
@@ -62,7 +62,7 @@
                         </child>
                         <child>
                           <object class="GtkLabel">
-                            <property name="label">RadxaOS</property>
+                            <property name="label" translatable="yes">RadxaOS</property>
                             <property name="margin-top">5</property>
                             <style>
                               <class name="title-4"/>
@@ -72,7 +72,7 @@
                         <child>
                           <object class="GtkButton" id="welcome_button">
                             <property name="halign">center</property>
-                            <property name="label">Click to begin</property>
+                            <property name="label" translatable="yes">Click to begin</property>
                             <property name="valign">center</property>
                             <property name="vexpand">True</property>
                             <style>
