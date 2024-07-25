@@ -2,3 +2,8 @@ data/com.radxa.welcome.desktop.in
 data/com.radxa.welcome.appdata.xml.in
 data/com.radxa.welcome.gschema.xml
 data/ui/window.ui
+data/ui/apps_page.ui
+data/ui/links_page.ui
+data/ui/preferences.ui
+welcome_support.py
+welcome.py

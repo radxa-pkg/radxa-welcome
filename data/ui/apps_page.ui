@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<!-- Created with Cambalache 0.90.4 -->
-<interface>
+<!-- Created with Cambalache 0.91.1 -->
+<interface domain="radxa-welcome">
   <requires lib="gtk" version="4.8"/>
   <requires lib="libadwaita" version="1.2"/>
   <template class="apps_page" parent="AdwBin">
@@ -14,7 +14,7 @@
             <child>
               <object class="GtkLabel">
                 <property name="halign">start</property>
-                <property name="label">Welcome to RadxaOS</property>
+                <property name="label" translatable="yes">Welcome to RadxaOS</property>
                 <style>
                   <class name="title-1"/>
                 </style>
@@ -23,7 +23,7 @@
             <child>
               <object class="GtkLabel">
                 <property name="halign">start</property>
-                <property name="label">Below you will find usefull applications</property>
+                <property name="label" translatable="yes">Below you will find useful applications</property>
                 <style>
                   <class name="."/>
                   <class name="."/>
@@ -150,7 +150,7 @@
                 <child>
                   <object class="GtkLabel">
                     <property name="justify">center</property>
-                    <property name="label">Task manager</property>
+                    <property name="label" translatable="yes">Task manager</property>
                     <property name="lines">1</property>
                     <property name="wrap">True</property>
                   </object>
